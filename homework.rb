@@ -118,8 +118,31 @@ end
 
 p sum_3_and_5 1000
 
+#PRIMES
 
+def check_prime? num
+	i = 2
+	prime = true
+	while i < num
+		if num%i === 0
+			prime = false
+			break
+		end
+		i+=1
+	end
+	prime
+end
 
+p check_prime? 7
 
+def get_primes max
+	i = 1
+	while i < max
+		i+=1
+		if check_prime?(i) === true
+			p i
+		end
+	end
+end
 
-
+get_primes 100
