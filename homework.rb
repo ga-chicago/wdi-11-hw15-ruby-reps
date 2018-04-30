@@ -92,3 +92,23 @@ def print_item_sums h1, h2
 end
 
 p print_item_sums table, book
+
+# ------ euler problem 1 ---------
+
+# find the sum of all multiples of 3 or 5 below 1000
+
+# def euler_sum 
+# 	sum = 0
+# 	for i in 0..1000
+# 		if i % 3 == 0 || i % 5 == 0
+# 			sum += i
+# 	p sum
+# end
+
+def euler_sum
+ sum = (0..999).select {|n| n%3==0 || n%5==0}.inject(0) {|s,n| s+=n}
+ sum
+end
+
+p euler_sum
+
