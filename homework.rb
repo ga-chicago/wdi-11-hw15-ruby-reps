@@ -44,7 +44,23 @@ p colors.reverse
 p colors.map(&:upcase)
 
 
+# METHODS
+# 1. Write a method that finds the area of a rectangle given values for width and height
+def find_area height, width
+	height * width
+end
 
+p find_area 5, 2
+
+# 2. Write a method that will loop over the nums array and print each number multiplied by 5
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five arr
+	arr.each { |a| p a * 5 }
+end
+
+p multiply_each_by_five nums
 
 
 
