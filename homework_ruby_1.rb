@@ -1,3 +1,5 @@
+require 'prime'
+
 p "Hello World"
 
 # After you have printed Hello World:
@@ -68,12 +70,11 @@ p find_area 5,10
 
 # Write a method that will loop over the nums array and print each number multiplied by 5
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
 def multiply_each_by_five arr
 	arr.each { |x| puts x * 5}
 end
 p multiply_each_by_five nums
-
-
 
 
 # Methods with a Hash
@@ -134,6 +135,58 @@ def sumMultiples(multiples)
 end
 
 p sumMultiples multiples
+
+# PRIMES
+# Write a method called check_prime? that will test whether a number is Prime. The method will return true if Prime, false if not.
+
+
+
+
+# def check_prime num 
+	# return if num <= 1
+  # (2..Math.sqrt(num)).none? { |i| (num % i).zero? }
+	
+# end
+
+# p check_prime 5
+
+
+def check_prime? n
+  (2..Math.sqrt(n)).none? {|i| n % i == 0}
+end
+
+p check_prime? 5
+
+
+############# testing
+
+#def check_prime1 
+
+	#Prime.first(5) 
+
+#end
+
+
+#Prime.each(100) do |prime|
+ # p prime 
+#end
+############ testing
+
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with get_primes 100, it will print all the Prime numbers up to and including 100.
+
+##############################
+
+def get_primes
+
+
+
+end
+
+p get_primes 100
+
+
+# This method can call on the previous check_prime? method.
+
 
 
 
