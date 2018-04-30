@@ -128,3 +128,12 @@ end
 
 p get_primes 100
 
+# ----- WORD FREQUENCY -----
+
+def most_freq_word str
+	arr_of_strings = str.split(' ')
+	arr_of_strings.max_by(&:length)
+end
+
+p most_freq_word "this is my favorite string"
+
