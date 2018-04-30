@@ -146,3 +146,22 @@ def get_primes max
 end
 
 get_primes 100
+
+#Word Frequency
+
+def word_frequency sentence
+	sent_arr = sentence.split(" ")
+	max_freq = 0
+	freq_word = ""
+	sent_arr.uniq.each do |word|
+		freq = sent_arr.count(word)
+		if freq > max_freq
+			max_freq = freq
+			freq_word = word
+		end
+	end
+
+	freq_word
+end
+
+p word_frequency "The grey fox leapt leapt"
