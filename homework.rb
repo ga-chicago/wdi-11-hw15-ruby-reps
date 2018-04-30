@@ -36,3 +36,19 @@ p colors.sample
 p colors.reverse
 
 p colors.map(&:capitalize)
+
+# ---- METHODS ------
+
+def find_area height, width
+	height * width
+end
+
+p find_area 5,4
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five arr
+	arr.map{|n| n * 5}
+end
+
+p multiply_each_by_five nums
