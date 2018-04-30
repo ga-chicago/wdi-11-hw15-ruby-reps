@@ -176,9 +176,13 @@ p check_prime? 5
 
 ##############################
 
+
+
+Prime.each(100) do |prime|
+ # p prime 
+end
+
 def get_primes
-
-
 
 end
 
