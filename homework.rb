@@ -93,3 +93,33 @@ def print_item_sums hash1,hash2
 end
 
 p print_item_sums lamp,book
+
+#PROBLEMS
+#EULER PROBLEM 1
+
+def sum_3_and_5 max
+	i = 2
+	sum = 0
+
+	while i < max-1
+		i+= 1
+		
+		if i%5 === 0
+			sum+=i
+			next
+		elsif i%3 === 0
+			sum+=i
+		end
+	end 
+
+	sum
+
+end
+
+p sum_3_and_5 1000
+
+
+
+
+
+
