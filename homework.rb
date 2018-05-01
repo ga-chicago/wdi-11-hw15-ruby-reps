@@ -14,7 +14,7 @@ p "Hello #{adjective} World"
 
 # Save "Hello World" to a variable. Without changing the letters in your code manually, permanently change "Hello World" to uppercased letters.
 
-variable = (puts("hello world".upcase))
+p variable = 'hello world'.upcase
 
 
 # Nums Array
@@ -43,9 +43,10 @@ p nums.include? (8)
 # With the following array:
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
 # Print out a random color.
 
-p  colors.shuffle.first
+p colors.shuffle.first
 
 # Print out the colors array in reverse order.
 
@@ -56,6 +57,27 @@ p colors.reverse
 # p colors.upcase
 
 p colors.each { |color| color.upcase! }
+
+# Methods
+
+# Write a method that finds the area of a rectangle given values for width and height
+# Remember, the keyword 'return' is implied and can be omitted
+
+def find_area(height, width)
+	height * width
+end
+
+p find_area(3, 2)
+
+# Write a method that will loop over the nums array and print each number multiplied by 5
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five(nums)
+	nums.each { |num| p num * 5 }
+end
+
+multiply_each_by_five(nums)
 
 
 
