@@ -147,9 +147,23 @@ def all_multiples
 end
 
 
+# PRIMES
 
+# Write a method called check_prime? that will test whether a number is Prime. The method will return true if Prime, false if not.
 
+require 'prime'
+def check_prime?(num)
+  Prime.prime?(num) 
+end
 
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with get_primes 100, it will print all the Prime numbers up to and including 100.
+# This method can call on the previous check_prime? method.
+
+def get_primes(limit)
+  limit.times { |num| p num if check_prime?(num) }
+end
+
+p get_primes(100)
 
 
 
