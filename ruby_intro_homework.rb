@@ -32,3 +32,17 @@ p colors.reverse
 
 p colors.map(&:upcase)
 
+# METHODS
+
+def find_area height, width
+	p height * width
+end
+
+find_area 4,6
+
+def multiply_each_by_five arr
+	p arr.map{|a| 2 * a}
+end
+
+multiply_each_by_five nums
+
