@@ -81,7 +81,48 @@ multiply_each_by_five(nums)
 
 
 
+# Methods with a Hash
+
+# # Hashes
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
 
 
+# Write a method that will take in any hash and return the price of the item.
+# # Compete this method:
+
+def print_price(*products)
+	products.each { |product| p product[:price] }
+end
+
+p print_price(book, lamp, table)
+
+
+# Write a method that will take in two hashes and will return the sum of the prices for the items in the hashes.
+# # Compete this method:
+
+def print_item_sums(hash1, hash2)
+	hash1[:price] + hash2[:price]
+end
+
+p print_item_sums(book, lamp)
 
 
