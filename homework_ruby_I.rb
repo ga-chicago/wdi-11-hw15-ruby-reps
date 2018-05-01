@@ -94,3 +94,23 @@ def euler_sum
 end
 
 p euler_sum
+
+# Write a method called check_prime? that will test whether a number is Prime.
+# The method will return true if Prime, false if not.
+require 'prime'
+
+def check_prime? num
+  Prime.prime?(num)
+end
+
+p check_prime? 120
+
+# Write another method called get_primes that will print all the Primes up to an arbitrary limit.
+# For example, if you invoke your method with get_primes 100
+#it will print all the Prime numbers up to and including 100.
+
+def get_primes limit
+  prime_nums = (0..limit).select{|n| check_prime?(n)}
+end
+
+p get_primes 100
