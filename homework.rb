@@ -142,29 +142,26 @@ p most_freq_word "this is my favorite string"
 
 def is_pandigital? num
 
-	num_string = num.to_s
-	length = num_string.length
-	arr_of_nums = num_string.split('')
-	arr_of_uniq_nums = arr_of_nums.uniq
-	max_val = arr_of_nums.max
-	if max_val.to_i < length.to_i
-		if arr_of_nums.include?("0")
-			if (arr_of_uniq_nums != arr_of_nums)
-				"pandigital"
-			end
-	else 
-	 	"not pandigital"
+	if num < 0
+		return "not pandigital"
 	end
-	# if arr_of_nums.include?("0")
-	# 	"not pandigital"
-	# end
-	# if arr_of_uniq_nums != arr_of_nums
-	# 	"not pandigital"
-	# end
-	# else 
-	# 	"pandigital"
+	if num.to_s.chars.to_a.include?("0")
+		return "not pandigital"
+	end
+	if num.to_s.chars.to_a.uniq != num.to_s.chars.to_a
+		return "not pandigital"
+	end
+
+	max_val = num.to_s.chars.to_a.max {|a,b| a <=> b }
+	length = num.to_s.length
+
+	if max_val.to_i > length
+		return "not pandigital"
+	end
+
+	"pandigital"
 
 end
 
-p is_pandigital? 923
+p is_pandigital? 1345
 
