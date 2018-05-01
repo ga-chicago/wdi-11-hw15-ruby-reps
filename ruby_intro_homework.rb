@@ -1,4 +1,4 @@
-# HELLO WORLD
+#-----------------HELLO WORLD-----------------#
 
 p "Hello World"
 
@@ -10,7 +10,7 @@ hello_world = "Hello World"
 
 p hello_world.upcase
 
-# ARRAYS
+#-----------------ARRAYS-----------------#
 
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 
@@ -32,7 +32,7 @@ p colors.reverse
 
 p colors.map(&:upcase)
 
-# METHODS
+#-----------------METHODS-----------------#
 
 def find_area height, width
 	p height * width
@@ -46,7 +46,7 @@ end
 
 multiply_each_by_five nums
 
-# METHODS WITH A HASH
+#-----------------METHODS WITH A HASH-----------------#
 
 book = {
   title: 'The Great Gatsby',
@@ -84,7 +84,7 @@ print_item_sums book, lamp
 print_item_sums lamp, table
 print_item_sums table, book
 
-# EULER PROBLEM 1
+#-----------------EULER PROBLEM 1-----------------#
 
 def euler_sum 
  # (1..10).each { |n| puts n }
@@ -96,6 +96,24 @@ end
 
 euler_sum
 
+#-----------------PRIMES-----------------# 
+require 'prime'
+
+
+def check_prime number
+	Prime.prime?(number)
+end
+
+p check_prime 5
+
+def get_primes limit
+	nums = (1..limit).select {|n| n.prime?}
+	p nums
+end
+
+get_primes 10
+get_primes 50
+get_primes 100
 
 
 
