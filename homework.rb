@@ -125,9 +125,14 @@ p euler_sum
 # Write a method called check_prime? that will test whether a number is Prime. 
 # The method will return true if Prime, false if not.
 
-# def check_prime? num
+require 'prime'
 
-# end
+def check_prime? num
+	Prime.prime?(num)
+end
+
+p check_prime? 3
+p check_prime? 4
 
 # Write another method called get_primes that will print all the Primes up to 
 # an arbitrary limit. For example, if you invoke your method with get_primes 100, 
@@ -135,16 +140,14 @@ p euler_sum
 
 # This method can call on the previous check_prime? method.
 
-# A Prime number is a number that is not evenly divisible by another number except 1 and itself.
 
-# To test whether a number is Prime, you only need to test as far as the square root of that number. 
-# This is advisable for optimization and testing large numbers.
+def get_primes limit
+	nums = (1...limit).select { |n| n.prime? }
+	
+	p nums
+end
 
-# def get_primes
-
-# end
-
-
+get_primes 50
 
 
 
