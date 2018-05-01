@@ -91,4 +91,21 @@ end
 
 p euler_problem
 
+# PRIMES
 
+# with this I can use the Prime class in my ruby file
+require 'prime'
+
+def check_prime? num
+	Prime.prime?(num)
+end
+
+p check_prime? 131
+
+def get_primes limit 
+	Prime.each(limit) do |prime|
+		p prime
+	end
+end
+
+p get_primes 100
