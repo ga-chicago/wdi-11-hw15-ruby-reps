@@ -141,6 +141,32 @@ p colors.reverse
 p colors.map(&:upcase)
 
 
+## Methods
+
+# * Write a method that finds the area 
+# of a rectangle given values for width and height
+# * Remember, the keyword 'return' 
+# is implied and can be omitted
+def find_area height, width
+	width * height 
+end
+
+p find_area 4, 6
+
+
+# * Write a method that will loop over 
+# the `nums` array and print each number 
+# multiplied by 5
+
+
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+	nums.each do |x|
+		x *= 5
+		p x	
+		end	
+
+ 
 
 
 
