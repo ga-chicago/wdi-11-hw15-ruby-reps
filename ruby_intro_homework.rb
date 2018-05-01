@@ -83,3 +83,31 @@ end
 print_item_sums book, lamp
 print_item_sums lamp, table
 print_item_sums table, book
+
+# EULER PROBLEM 1
+
+def euler_sum 
+ # (1..10).each { |n| puts n }
+ nums = (1..999).select { |n| n%3==0 || n%5==0 }
+ # p nums
+ num_sum = nums.inject(0) {|s,n| s+=n}
+ p num_sum
+end
+
+euler_sum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
