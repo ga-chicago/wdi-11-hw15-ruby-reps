@@ -80,3 +80,17 @@ def print_item_sums hash1, hash2
 end
 
 p print_item_sums book, table
+
+
+
+# EULER PROBLEM 1
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+#The sum of these multiples is 23.
+# Find the sum of all the multiples of 3 or 5 below 1000.
+
+def euler_sum
+   nums = (0..999).select { |n| n%3==0 || n%5==0 }
+   num_sum = nums.inject(0) {|s,n| s+=n}
+end
+
+p euler_sum
