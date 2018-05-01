@@ -46,3 +46,40 @@ end
 
 multiply_each_by_five nums
 
+# METHODS WITH A HASH
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+
+def print_price hash
+	p "Price: #{hash[:price]}"
+end
+
+print_price table
+print_price lamp
+print_price book
+
+def print_item_sums hash1, hash2
+	p hash1[:price] + hash2[:price]
+end
+
+print_item_sums book, lamp
+print_item_sums lamp, table
+print_item_sums table, book
