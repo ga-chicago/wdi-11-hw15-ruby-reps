@@ -57,6 +57,7 @@ p colors.reverse
 # p colors.upcase
 
 p colors.each { |color| color.upcase! }
+# p colors.each(&:upcase!)
 
 # Methods
 
@@ -124,5 +125,35 @@ def print_item_sums(hash1, hash2)
 end
 
 p print_item_sums(book, lamp)
+
+# PROBLEMS
+
+# EULER PROBLEM 1
+
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+# Find the sum of all the multiples of 3 or 5 below 1000.
+def multiple_of_three_or_five?(num)
+  num % 3 == 0 || num % 5 == 0
+end
+
+
+def all_multiples
+  sum = 0
+  999.times do |num|
+     sum += num if multiple_of_three_or_five?(num)
+  end
+  sum
+end
+
+
+
+
+
+
+
+
+
+
 
 
