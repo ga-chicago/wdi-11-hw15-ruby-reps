@@ -165,3 +165,24 @@ def word_frequency sentence
 end
 
 p word_frequency "The grey fox leapt leapt"
+
+#Pandigital
+
+def is_pandigital? num
+	pandigital = true
+	num_arr = num.to_s.split("")
+
+	num_arr.each do |digit|
+		if digit === '0'
+			pandigital = false
+			break
+		elsif num_arr.count(digit) > 1
+			pandigital = false
+			break
+		end
+	end
+
+	pandigital
+end
+
+p is_pandigital? 12345
