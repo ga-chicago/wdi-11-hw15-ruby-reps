@@ -24,3 +24,20 @@ p colors.sample
 p colors.reverse
 
 p colors.to_s.upcase
+
+# Methods
+# Write a method that finds the area of a rectangle given values for width and height
+
+def find_area height, width
+  height * width
+end
+
+p find_area 2, 5
+
+#Write a method that will loop over the nums array and print each number multiplied by 5
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+def multiply_by_five arr
+  arr.map {|a| a*5}
+end
+
+p multiply_by_five nums
