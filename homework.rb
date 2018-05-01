@@ -137,3 +137,34 @@ end
 
 p most_freq_word "this is my favorite string"
 
+
+# ---- PANDIGITAL ----- 
+
+def is_pandigital? num
+
+	num_string = num.to_s
+	length = num_string.length
+	arr_of_nums = num_string.split('')
+	arr_of_uniq_nums = arr_of_nums.uniq
+	max_val = arr_of_nums.max
+	if max_val.to_i < length.to_i
+		if arr_of_nums.include?("0")
+			if (arr_of_uniq_nums != arr_of_nums)
+				"pandigital"
+			end
+	else 
+	 	"not pandigital"
+	end
+	# if arr_of_nums.include?("0")
+	# 	"not pandigital"
+	# end
+	# if arr_of_uniq_nums != arr_of_nums
+	# 	"not pandigital"
+	# end
+	# else 
+	# 	"pandigital"
+
+end
+
+p is_pandigital? 923
+
