@@ -82,3 +82,13 @@ def print_item_sums hash1, hash2
 end
 
 p print_item_sums book, lamp
+
+# EULER PROBLEM
+
+def euler_problem 
+	(0..999).select{|a| a % 3 | a % 5}.sum
+end
+
+p euler_problem
+
+
