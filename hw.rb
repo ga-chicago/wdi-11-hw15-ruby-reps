@@ -117,6 +117,25 @@ p print_item_sums table, lamp
 
 
 
+# EULER PROBLEM 1
+sum = 0
+
+array = [*1...1000]
+
+array.map { |num|  
+
+	if num % 3 == 0 or num % 5 == 0
+		
+		sum = num + sum
+	end
+
+}
+p sum,'Euler!!!!!!!'
+
+
+
+
+
 
 
 
