@@ -143,12 +143,24 @@ p check_prime? 4
 
 def get_primes limit
 	nums = (1...limit).select { |n| n.prime? }
-	
+
 	p nums
 end
 
 get_primes 50
 
+
+# WORD FREQUENCY
+def word_freq string
+	words = string.split(' ')
+
+	word = words.detect { |x| words.count(x) > 1 }
+
+	p word
+end
+
+word_freq "hello this hello that hello"
+word_freq "this is dog and dog like dog"
 
 
 
