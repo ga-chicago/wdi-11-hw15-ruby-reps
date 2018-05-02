@@ -133,6 +133,36 @@ array.map { |num|
 p sum,'Euler!!!!!!!'
 
 
+# Prime
+
+require 'prime'
+
+
+def check_prime? num
+
+	num.prime?
+end
+
+p check_prime? 2
+
+
+
+
+def get_primes limit
+
+	Prime.each(limit) do |prime|
+  		p prime
+	end
+end	
+
+
+
+get_primes 100
+
+
+
+
+
 
 
 
