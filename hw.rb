@@ -66,7 +66,58 @@ def multiply_5 array
 	array.map { |num| num * 5  }
 end
 
-p multiply_5 nums		
+p multiply_5 nums
+
+
+
+# Hashes
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+
+
+
+
+
+# Compete this method:
+
+def print_price hash1
+	hash1[:price]
+end	
+
+
+p print_price table
+
+
+# Compete this method:
+
+def print_item_sums hash1, hash2
+	hash1[:price] + hash2[:price]
+end	
+
+p print_item_sums table, lamp
+
+
+
+
+
 
 
 
